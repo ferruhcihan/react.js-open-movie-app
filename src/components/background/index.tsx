@@ -1,6 +1,11 @@
+import React from "react";
 import { Wrapper } from "./styles";
 
-const Background = ({ children }: any) => {
+export interface IBackground {
+  children: React.ReactNode;
+}
+
+const Background = ({ children }: IBackground) => {
   return <Wrapper>{children}</Wrapper>;
 };
 

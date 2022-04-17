@@ -2,12 +2,17 @@ import { createTheme, ThemeOptions } from "@mui/material";
 
 interface ITheme {
   primaryBgColor: string;
-  white: string;
+  secondaryBgColor: string;
+  primaryTextColor: string;
+  secondaryTextColor: string;
 }
 
 interface ITypography {
   headerLogo: {};
   title: {};
+  title2: {};
+  title3: {};
+  paragraph: {};
 }
 
 declare module "@mui/material" {
@@ -17,26 +22,46 @@ declare module "@mui/material" {
 }
 
 export const AppColors: ITheme = {
-  primaryBgColor: "#263238",
-  white: "#FFF",
+  primaryBgColor: "#000",
+  secondaryBgColor: "#f5f5f5",
+  primaryTextColor: "#212121",
+  secondaryTextColor: "#424242",
 };
 
 const commonTheme = {
   ...AppColors,
 
   typography: {
-    fontFamily: "'Baloo Chettan 2'",
+    fontFamily: "Poppins",
     headerLogo: {
-      fontWeight: 900,
+      fontWeight: "bold",
       fontSize: "3rem",
       lineHeight: "3.5rem",
-      color: AppColors.white,
+      color: AppColors.secondaryBgColor,
     },
     title: {
-      fontWeight: 600,
-      fontSize: "1.6rem",
-      lineHeight: "2rem",
-      color: AppColors.white,
+      fontWeight: "bold",
+      fontSize: "2rem",
+      lineHeight: "2.5rem",
+      color: AppColors.primaryTextColor,
+    },
+    title2: {
+      fontWeight: "regular",
+      fontSize: "1rem",
+      lineHeight: "1.2rem",
+      color: AppColors.secondaryTextColor,
+    },
+    title3: {
+      fontWeight: "semibold",
+      fontSize: "1.5rem",
+      lineHeight: "1.7rem",
+      color: AppColors.primaryTextColor,
+    },
+    paragraph: {
+      fontWeight: "regular",
+      fontSize: "1.3rem",
+      lineHeight: "1.5rem",
+      color: AppColors.secondaryTextColor,
     },
   },
 

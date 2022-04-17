@@ -2,22 +2,27 @@ import { Box, styled } from "@mui/material";
 
 export const Wrapper = styled(Box)`
   position: absolute;
-  top: 0;
+  bottom: 0;
   background: #000;
-  min-height: 4rem;
+  height: 4rem;
   width: 100%;
   display: flex;
   flex-direction: row;
+  justify-content: center;
   align-items: center;
 
   .icon {
+    cursor: pointer;
     margin: 1rem;
   }
 `;
 
-export const LogoWrapper = styled(Box)`
+export const PageNumberBox = styled(Box)`
   display: flex;
   flex-direction: row;
+  justify-content: center;
   align-items: center;
-  cursor: pointer;
+  width: 20px;
+  font-size: 2rem;
+  color: ${({ theme }) => theme.secondaryBgColor};
 `;
