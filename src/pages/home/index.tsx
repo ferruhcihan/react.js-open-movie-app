@@ -1,10 +1,10 @@
 import { Wrapper, MovieWrapper } from "./styles";
+import MovieCard, { Movie } from "../../components/movieCard";
 import Spinner from "../../components/spinner";
 import Error from "../../components/error";
 import Footer from "../../components/footer";
 import Header from "../../components/header";
 import { useAppSelector } from "../../redux/store";
-import MovieCard, { Movie } from "../../components/movieCard";
 
 const Home = () => {
   const { data, loading, error } = useAppSelector((state) => state.movies);
